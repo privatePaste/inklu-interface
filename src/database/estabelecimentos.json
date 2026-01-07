@@ -1,0 +1,268 @@
+[
+  {
+    "id": 1,
+    "nome": "Café Cerrado",
+    "descricao": "Café artesanal com grãos do cerrado goiano, ambiente aconchegante e Wi-Fi gratuito.",
+    "avaliacao": 4.8,
+    "imagens": [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+      "https://images.unsplash.com/photo-1523942839745-7848d9f8b8f6"
+    ],
+    "latitude": -16.686891,
+    "longitude": -49.264794
+  },
+  {
+    "id": 2,
+    "nome": "Restaurante Vila Rica",
+    "descricao": "Culinária brasileira contemporânea com pratos regionais e ingredientes frescos.",
+    "avaliacao": 4.6,
+    "imagens": [
+      "https://images.unsplash.com/photo-1555992336-03a23c1f28f9",
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe"
+    ],
+    "latitude": -16.679927,
+    "longitude": -49.255025
+  },
+  {
+    "id": 3,
+    "nome": "Padaria Bom Dia Goiânia",
+    "descricao": "Padaria tradicional com pães artesanais, cafés e doces feitos diariamente.",
+    "avaliacao": 4.5,
+    "imagens": [
+      "https://images.unsplash.com/photo-1608198093002-ad4e005484ec",
+      "https://images.unsplash.com/photo-1549931319-a545dcf3bc73"
+    ],
+    "latitude": -16.703659,
+    "longitude": -49.277088
+  },
+  {
+    "id": 4,
+    "nome": "Churrascaria Goiás Grill",
+    "descricao": "Rodízio de carnes nobres com cortes especiais e buffet completo.",
+    "avaliacao": 4.7,
+    "imagens": [
+      "https://images.unsplash.com/photo-1558030006-450675393462",
+      "https://images.unsplash.com/photo-1544025162-d76694265947"
+    ],
+    "latitude": -16.735217,
+    "longitude": -49.272409
+  },
+  {
+    "id": 5,
+    "nome": "Bistrô Anápolis Gourmet",
+    "descricao": "Bistrô moderno com pratos autorais e carta de vinhos selecionada.",
+    "avaliacao": 4.4,
+    "categoria": "Bistrô",
+    "atendimentos": [
+      "acessibilidade",
+      "wifi",
+      "estacionamento"
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+      "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c"
+    ],
+    "latitude": -16.328546,
+    "longitude": -48.952658
+  },
+  {
+    "id": 6,
+    "nome": "Café Histórico de Pirenópolis",
+    "descricao": "Café localizado no centro histórico, com doces caseiros e vista charmosa.",
+    "avaliacao": 4.9,
+    "categoria": "Padaria",
+    "atendimentos": [
+      "wifi",
+      "petFriendly"
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348",
+      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+    ],
+    "latitude": -15.850736,
+    "longitude": -48.959754
+  },
+  {
+    "id": 7,
+    "nome": "Restaurante Sabor Mineiro",
+    "descricao": "Especialidades da culinária mineira com pratos típicos e ambiente familiar.",
+    "avaliacao": 4.3,
+    "categoria": "Restaurante",
+    "atendimentos": [
+      "acessibilidade",
+      "estacionamento"
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+      "https://images.unsplash.com/photo-1543352634-8e6f3b5f1b2d"
+    ],
+    "latitude": -16.704305,
+    "longitude": -49.240622
+  },
+  {
+    "id": 8,
+    "nome": "Café Bueno",
+    "descricao": "Café charmoso no Setor Bueno.",
+    "avaliacao": 4.7,
+    "categoria": "Café",
+    "atendimentos": [
+      "wifi",
+      "delivery"
+    ],
+    "imagens": [
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+    ],
+    "latitude": -16.711902,
+    "longitude": -49.269683
+  },
+    {
+      "id": 9,
+      "nome": "Cantina Italiana Bueno",
+      "descricao": "Cantina tradicional com massas artesanais e receitas italianas clássicas.",
+      "avaliacao": 4.6,
+      "categoria": "Restaurante",
+      "atendimentos": [
+        "wifi",
+        "estacionamento"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1528605248644-14dd04022da1",
+        "https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+      ],
+      "latitude": -16.710312,
+      "longitude": -49.267845
+    },
+    {
+      "id": 10,
+      "nome": "Burger Central Goiânia",
+      "descricao": "Hambúrgueres artesanais com blends exclusivos e ambiente moderno.",
+      "avaliacao": 4.5,
+      "categoria": "Hamburgueria",
+      "atendimentos": [
+        "delivery",
+        "wifi"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1550547660-d9450f859349",
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+      ],
+      "latitude": -16.686423,
+      "longitude": -49.276912
+    },
+    {
+      "id": 11,
+      "nome": "Restaurante Pequi Dourado",
+      "descricao": "Culinária regional goiana com pratos típicos e ingredientes do cerrado.",
+      "avaliacao": 4.8,
+      "categoria": "Restaurante",
+      "atendimentos": [
+        "acessibilidade",
+        "estacionamento"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+        "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe"
+      ],
+      "latitude": -16.701882,
+      "longitude": -49.255674
+    },
+    {
+      "id": 12,
+      "nome": "Café Paulista",
+      "descricao": "Café urbano no coração da Avenida Paulista, ideal para reuniões e trabalho.",
+      "avaliacao": 4.7,
+      "categoria": "Café",
+      "atendimentos": [
+        "wifi"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+        "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+      ],
+      "latitude": -23.561414,
+      "longitude": -46.655881
+    },
+    {
+      "id": 13,
+      "nome": "Bistrô Vila Madalena",
+      "descricao": "Bistrô contemporâneo com pratos autorais e clima descontraído.",
+      "avaliacao": 4.6,
+      "categoria": "Bistrô",
+      "atendimentos": [
+        "wifi",
+        "petFriendly"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+        "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c"
+      ],
+      "latitude": -23.561944,
+      "longitude": -46.691876
+    },
+    {
+      "id": 14,
+      "nome": "Churrascaria Fogo Paulista",
+      "descricao": "Rodízio premium com cortes nobres e buffet completo.",
+      "avaliacao": 4.8,
+      "categoria": "Churrascaria",
+      "atendimentos": [
+        "estacionamento",
+        "acessibilidade"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1558030006-450675393462",
+        "https://images.unsplash.com/photo-1544025162-d76694265947"
+      ],
+      "latitude": -23.550520,
+      "longitude": -46.633308
+    },
+    {
+      "id": 15,
+      "nome": "Restaurante Mar Azul Copacabana",
+      "descricao": "Frutos do mar frescos com vista privilegiada para a praia de Copacabana.",
+      "avaliacao": 4.7,
+      "categoria": "Restaurante",
+      "atendimentos": [
+        "wifi"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1553621042-f6e147245754",
+        "https://images.unsplash.com/photo-1516684732162-798a0062be99"
+      ],
+      "latitude": -22.971177,
+      "longitude": -43.182543
+    },
+    {
+      "id": 16,
+      "nome": "Café Carioca Antigo",
+      "descricao": "Café tradicional no centro do Rio com receitas clássicas brasileiras.",
+      "avaliacao": 4.5,
+      "categoria": "Café",
+      "atendimentos": [
+        "wifi"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+        "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+      ],
+      "latitude": -22.903539,
+      "longitude": -43.209587
+    },
+    {
+      "id": 17,
+      "nome": "Burgueria Botafogo Grill",
+      "descricao": "Hambúrgueres artesanais e cervejas especiais em Botafogo.",
+      "avaliacao": 4.6,
+      "categoria": "Hamburgueria",
+      "atendimentos": [
+        "delivery",
+        "wifi"
+      ],
+      "imagens": [
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+        "https://images.unsplash.com/photo-1550547660-d9450f859349"
+      ],
+      "latitude": -22.951911,
+      "longitude": -43.180349
+    }
+]
