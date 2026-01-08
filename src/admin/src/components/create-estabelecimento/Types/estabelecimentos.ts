@@ -1,6 +1,6 @@
 // Tipo que REPRESENTA o que vem da API
 export interface Estabelecimento {
-  id: string;
+  id: string ;
   userId: string;
 
   name: string;

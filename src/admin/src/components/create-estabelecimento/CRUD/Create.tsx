@@ -106,6 +106,10 @@ export default function CreateEstabelecimento() {
         ...form,
         latitude,
         longitude,
+      }, {
+        headers: {
+          "x-user-id": "2d06a445-d457-495f-8aa0-f8f401e08b34",
+        },
       })
 
       setSuccess(true)

@@ -1,16 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useEffect, useState } from "react";
-import {
-  Wifi,
-  Accessibility,
-  PawPrint,
-  Truck,
-  ParkingCircle,
-   Users,
-  Baby,
-  Trees
-} from "lucide-react";
-
 import { calcDistance } from "../utils/calcDistance";
 import { useUserLocation } from "../Hook/UserLocation";
 import { createPhotoMarker } from "../components/L/L";
@@ -18,21 +7,8 @@ import MapHeader from "./MapHeader";
 import ListaLocais from "./ListLocal";
 import api from "../api/api";
 import type { Estabelecimento } from "src/admin/src/components/create-estabelecimento/Types/estabelecimentos";
+import { atendimentoIcons } from "../utils/iconsAtendimentos";
 
-
-const atendimentoIcons: Record<
-  string,
-  { icon: React.ElementType; label: string }
-> = {
-  wifi: { icon: Wifi, label: "Wi-Fi" },
-  acessibilidade: { icon: Accessibility, label: "Acessibilidade" },
-  pet_friendly: { icon: PawPrint, label: "Pet Friendly" },
-  delivery: { icon: Truck, label: "Delivery" },
-  estacionamento: { icon: ParkingCircle, label: "Estacionamento" },
-  familia: { icon: Users, label: "Família" },
-  criancas: { icon: Baby, label: "Crianças" },
-  area_externa: { icon: Trees, label: "Área externa" },
-};
 
 
 export function Mapa() {
@@ -48,7 +24,7 @@ export function Mapa() {
           "/estabelecimentos/",
           {
             headers: {
-              "x-user-id": "e98f8b94-192f-47bd-8da6-8399cfc007bf",
+              "x-user-id": "2d06a445-d457-495f-8aa0-f8f401e08b34",
             },
           }
         );
@@ -115,41 +91,51 @@ export function Mapa() {
                 position={[est.latitude, est.longitude]}
                 icon={createPhotoMarker(est.image_url || "IMAGEM_PADRAO_URL")}
               >
-                <Popup className="rounded-xl">
-                  <div className="w-[240px] overflow-hidden rounded-xl font-sans">
+                <Popup
+                  closeButton={false}
+                  className="!rounded-xl !p-0 !shadow-xl"
+                >
+                  <div className="w-[220px] overflow-hidden rounded-xl bg-white font-sans">
                     {est.image_url && (
-                      <img
-                        src={est.image_url}
-                        alt={est.name}
-                        className="h-32 w-full object-cover"
-                      />
+                      <div className="relative h-36 w-full">
+                        <img
+                          src={est.image_url}
+                          alt={est.name}
+                          className="h-full w-full object-cover"
+                        />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+                        <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between">
+                          <h3 className="max-w-[140px] truncate text-sm font-semibold text-white">
+                            {est.name}
+                          </h3>
+
+                          {est.rating && (
+                            <span className="rounded-full bg-white/90 px-2 py-0.5 text-[11px] font-medium text-black">
+                              ⭐ {est.rating}
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     )}
 
-                    <div className="space-y-2 p-3">
-                      <div>
-                        <h3 className="text-sm font-semibold leading-tight">
-                          {est.name}
-                        </h3>
-                        <span className="text-xs text-gray-500">
-                          {est.cuisine_type}
-                        </span>
-                      </div>
+                    {/* CONTEÚDO */}
+                    <div className="space-y-2 px-3 py-3">
 
-                      {est.rating && (
-                        <div className="flex items-center text-xs">
-                          ⭐ <span className="ml-1 font-medium">{est.rating}</span>
+                      <span className="text-[11px] text-gray-500">
+                        {est.cuisine_type}
+                      </span>
+
+                      {est.opening_hours && (
+                        <div className="text-[11px] text-gray-500">
+                          ⏰ {est.opening_hours}
                         </div>
                       )}
 
-                      {est.opening_hours && (
-                        <p className="text-xs text-gray-600">
-                          ⏰ {est.opening_hours}
-                        </p>
-                      )}
-
-                      {/* Atendimentos especiais */}
+                      {/* ATENDIMENTOS */}
                       {est.atendimento_especial?.length > 0 && (
-                        <div className="mt-2 flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5 pt-1">
                           {est.atendimento_especial.map((item) => {
                             const iconData = atendimentoIcons[item];
                             if (!iconData) return null;
@@ -159,12 +145,15 @@ export function Mapa() {
                             return (
                               <div
                                 key={item}
-                                className="group relative flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-gray-700"
+                                className="group relative flex h-7 w-7 items-center justify-center rounded-full
+                           bg-muted text-muted-foreground
+                           transition hover:bg-primary hover:text-primary-foreground"
                               >
-                                <Icon size={16} />
+                                <Icon size={14} />
 
-                                {/* Tooltip */}
-                                <span className="pointer-events-none absolute bottom-full mb-1 hidden whitespace-nowrap rounded bg-black px-2 py-1 text-[10px] text-white group-hover:block">
+                                <span className="pointer-events-none absolute bottom-full mb-1 hidden
+                                 whitespace-nowrap rounded bg-black px-2 py-0.5
+                                 text-[10px] text-white group-hover:block">
                                   {iconData.label}
                                 </span>
                               </div>
@@ -173,20 +162,19 @@ export function Mapa() {
                         </div>
                       )}
 
-
-                      {/* Endereço */}
-                      <p className="line-clamp-2 text-xs text-gray-500">
+                      <p className="line-clamp-1 text-[11px] text-gray-400">
                         📍 {est.address}
                       </p>
 
-                      {/* Ações */}
-                      <div className="flex gap-2 pt-2">
+                      <div className="flex gap-1.5 pt-2">
                         {est.website && (
                           <a
                             href={est.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 rounded-lg bg-black px-2 py-1 text-center text-xs font-medium text-white hover:bg-gray-800"
+                            className="flex-1 rounded-md border border-gray-200
+                       px-2 py-1 text-center text-[11px]
+                       transition hover:bg-gray-100"
                           >
                             Site
                           </a>
@@ -197,7 +185,10 @@ export function Mapa() {
                             href={`https://wa.me/55${est.whatsapp}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 rounded-lg bg-green-500 px-2 py-1 text-center text-xs font-medium text-white hover:bg-green-600"
+                            className="flex-1 rounded-md bg-green-500
+                       px-2 py-1 text-center text-[11px]
+                       font-medium text-white
+                       transition hover:bg-green-600"
                           >
                             WhatsApp
                           </a>

@@ -41,7 +41,7 @@ export default function HotProducts() {
   const [products] = useState(fakeProducts)
 
   return (
-    <section className="mb-12 space-y-6">
+    <section>
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold tracking-tight">
           Mais visitados
